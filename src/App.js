@@ -25,7 +25,10 @@ function App() {
   };
 
   useEffect(() => {
-    const socket = io.connect("http://localhost:3006");
+    const socket = io.connect("https://669a-117-211-34-42.in.ngrok.io", { transports : ['websocket'] });
+    socket.on("connect_error", (err) => {
+      console.log(`connect_error due to ${err.message}`);
+    });
     socket.on("connect", () => {
       console.log("connected in front-end", socket.connected);
     });
@@ -45,8 +48,8 @@ function App() {
               <p className="text-2xl">Chat Bot</p>
             </header>
             <div className="relative h-[calc(100vh-3.5rem)]">
-              <div className="h-[calc(100vh-7rem)] py-2"></div>
-              <div className="w-full h-14">
+              <div className="h-[calc(100vh-6rem)] py-2"></div>
+              <div className="w-full">
                 <ChatInput handleSend={handleSend} />
               </div>
             </div>

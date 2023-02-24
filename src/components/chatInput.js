@@ -27,7 +27,7 @@ const ChatInput = ({handleSend}) => {
         />
       </div>
       <div tabIndex={1} className="w-1/12 h-full flex items-center justify-center ">
-        <span onClick={handleClick} className="material-symbols-outlined text-3xl border px-2 bg-emerald-600 cursor-pointer w-full text-center">send</span>
+        <span onClick={handleClick} className="material-symbols-outlined text-3xl border bg-emerald-600 cursor-pointer w-full text-center">send</span>
       </div>
     </div>
   );
