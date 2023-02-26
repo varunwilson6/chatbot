@@ -23,7 +23,7 @@ const ChatInput = ({handleSend}) => {
           type="text"
           onChange={handleUserInput}
           value={userInput}
-          placeholder="Type here ..." 
+          placeholder="Reply ethil work agulla" 
         />
       </div>
       <div tabIndex={1} className="w-1/12 h-full flex items-center justify-center ">

@@ -16,7 +16,7 @@ const users = [
 ];
 
 const LockView = () => {
-  const [currentLock] = useState("test");
+  const [currentLock] = useState(new Date().getDate() + "skylantern");
   const [isModalOpen, updateModal] = useState(true);
   const [showUserSelect, updateUserSelect] = useState(false);
 
@@ -25,7 +25,7 @@ const LockView = () => {
   const handlePasswordChange = (e) => {
     const userInput = e.target.value;
     if (currentLock === userInput) {
-      updateUserSelect(true);
+      updateUser(true);
     }
   };
 
